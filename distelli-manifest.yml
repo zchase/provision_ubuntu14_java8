@@ -1,0 +1,14 @@
+bmcgehee/provision_ubuntu14_java8:
+  Env:
+    - CATALINA_HOME: "/usr/local/tomcat"
+    - JAVA_HOME: "/usr/lib/jvm/java-8-oracle"
+    - PATH: "$CATALINA_HOME/bin:$JAVA_HOME/bin:$PATH"
+  Build:
+    - echo "Nothing to Build"
+  PreInstall:
+    - sudo add-apt-repository -y ppa:webupd8team/java
+    - sudo apt-get -y update
+    - echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+    - echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections    
+    - sudo apt-get -y install oracle-java8-installer
+    - sudo apt-get -y install oracle-java8-set-default
