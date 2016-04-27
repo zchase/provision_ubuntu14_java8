@@ -1,4 +1,4 @@
-bmcgehee/provision_ubuntu14_java8:
+bmcgeheedd/provision_ubuntu14_java8:
   Env:
     - CATALINA_HOME: "/usr/local/tomcat"
     - JAVA_HOME: "/usr/lib/jvm/java-8-oracle"
