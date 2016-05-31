@@ -1,8 +1,4 @@
-bmcgeheedd/provision_ubuntu14_java8:
-  Env:
-    - CATALINA_HOME: "/usr/local/tomcat"
-    - JAVA_HOME: "/usr/lib/jvm/java-8-oracle"
-    - PATH: "$CATALINA_HOME/bin:$JAVA_HOME/bin:$PATH"
+zchase/provision_ubuntu14_java8:
   Build:
     - echo "Nothing to Build"
   PreInstall:
